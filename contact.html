@@ -39,22 +39,25 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8 offset-lg-2">
-            <form method="POST" action="mail.php">
-              <div class="form-group">
-                <input class="form-control" type="text" placeholder="Nombre" name="nombre">
-              </div>
-              <div class="form-group">
-                <input class="form-control" type="email" placeholder="Email" name="mail">
-              </div>
-              <div class="form-group">
-                <input class="form-control" type="text" placeholder="Asunto" name="asunto">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Mensaje" name="mensaje"></textarea>
-              </div>
-              <div class="form-group col-8 offset-2">
-                <button class="form-control btn btn-secondary" type="submit">Enviar</button>
-              </div>
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>   
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Your Role: <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
             </form>
           </div>
         </div>
